@@ -22,6 +22,9 @@ namespace Reto_02.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            //-> Azure mobile client
+            Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
+
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 

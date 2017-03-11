@@ -19,6 +19,9 @@ namespace Reto_02.Droid
 
             base.OnCreate(bundle);
 
+            //-> Azure mobile client
+            Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init(); 
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
