@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Reto_02.ViewModels;
+using Reto_02.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +15,7 @@ namespace Reto_02
         {
             InitializeComponent();
 
-            MainPage = new Reto_02.MainPage();
+            MainPage = new NavigationPage( new ListCitiesView(new ListCitiesViewModel()));
         }
 
         protected override void OnStart()

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Reto_02.Views.ListCitiesView">
+
+    <ListView
+        x:Name="listView"
+        ItemsSource="{Binding Cities}"
+        HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ImageCell ImageSource="{Binding ImagePath}"
+                           Text="{Binding Name}"
+                           TextColor="Black"
+                           Detail="{Binding Description}"
+                           DetailColor="Gray" />
+
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
