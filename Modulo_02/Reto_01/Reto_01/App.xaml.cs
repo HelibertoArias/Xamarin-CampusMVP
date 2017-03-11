@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Reto_01.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace Reto_01
         {
             InitializeComponent();
 
-            MainPage = new Reto_01.MainPage();
+            MainPage = new Reto_01.Views.MainView(new MainViewModel());
         }
 
         protected override void OnStart()

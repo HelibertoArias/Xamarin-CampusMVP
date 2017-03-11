@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Reto_01.Views.MainView">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <!--First row-->
+        <Label Grid.Column="0"
+               Grid.Row="0"
+               HorizontalOptions="End"
+               VerticalOptions="Center"
+               Text="Food &amp; Drink:" />
+        <Entry Grid.Column="1"
+               Grid.Row="0"
+               Keyboard="Numeric"
+               Text="{Binding Food}"/>
+
+        <!--Second row-->
+        <Label Grid.Column="0"
+               Grid.Row="1"
+               HorizontalOptions="End"
+               VerticalOptions="Center"
+               Text="Total after Tax:" />
+        <Entry Grid.Column="1"
+               Grid.Row="1"
+               Keyboard="Numeric"
+               Text="{Binding FoodTax}" />
+
+        <!--Third row-->
+        <Label Grid.Column="0"
+               Grid.Row="2"
+               HorizontalOptions="End"
+               VerticalOptions="Center"
+               Text="Tip Percent:"/>
+        <Entry Grid.Column="1"
+               Grid.Row="2"
+               Keyboard="Numeric"
+               BindingContext="{x:Reference Name=sliderTipPercent}"
+               Text="{Binding Path=Value }" /> 
+       
+        <!--Fourth row-->
+        <Slider 
+            x:Name="sliderTipPercent"
+            Grid.Column="0"
+            Grid.Row="3"
+            Grid.ColumnSpan="2"
+            Minimum="0"
+            Maximum="100"/>
+
+        <!--Fifth row-->
+        <Label Grid.Column="0"
+               Grid.Row="4"
+               HorizontalOptions="End"
+               VerticalOptions="Center"
+               Text="Tip Amount:" />
+        <Entry Grid.Column="1"
+               Grid.Row="4"
+               Keyboard="Numeric"
+               Text="{Binding TipAmount}" />
+      
+
+        <!--Sixth row-->
+        <Label Grid.Column="0"
+               Grid.Row="5"
+               HorizontalOptions="End"
+               VerticalOptions="Center"
+               Text="Total:" />
+        <Entry Grid.Column="1"
+               Grid.Row="5"
+               Keyboard="Numeric"
+               Text="{Binding Total}"/>
+    </Grid>
+</ContentPage>
