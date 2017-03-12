@@ -4,7 +4,7 @@
              x:Class="Reto_02.Views.DetailCityView">
 
     <StackLayout>
-        <Image Source="{Binding ImagePath}" HeightRequest="50" WidthRequest="50"></Image>
+        <Image Source="{Binding ImagePath}" HeightRequest="200" Aspect="AspectFill"></Image>
 
         <Label Text="{Binding Name}"  />
         <Editor Text="{Binding Description}" />
